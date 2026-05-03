@@ -149,5 +149,3 @@ COMMENT ON TABLE claims IS 'Stores insurance claim records with risk assessment 
 COMMENT ON COLUMN claims.risk_score IS 'Risk score from 0-100, where higher values indicate higher risk';
 COMMENT ON COLUMN claims.status IS 'Current status of the claim in the processing workflow';
 COMMENT ON COLUMN claims.fraud_indicators IS 'JSON array of detected fraud indicators';
-
--- Made with Bob
