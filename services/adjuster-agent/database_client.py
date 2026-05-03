@@ -116,13 +116,13 @@ class DatabaseClient:
         self._ensure_connection()
         
         query = """
-            SELECT 
+            SELECT
                 COUNT(*) as total_claims,
                 COALESCE(SUM(claim_amount), 0) as total_amount,
                 COALESCE(AVG(claim_amount), 0) as average_amount,
                 COALESCE(AVG(risk_score), 0) as average_risk_score,
-                COUNT(CASE WHEN status = 'AUTO_APPROVED' THEN 1 END) as approved_count,
-                COALESCE(SUM(CASE WHEN status = 'AUTO_APPROVED' THEN claim_amount ELSE 0 END), 0) as approved_amount,
+                COUNT(CASE WHEN status = 'APPROVED' THEN 1 END) as approved_count,
+                COALESCE(SUM(CASE WHEN status = 'APPROVED' THEN claim_amount ELSE 0 END), 0) as approved_amount,
                 COUNT(CASE WHEN status = 'UNDER_REVIEW' THEN 1 END) as under_review_count,
                 COUNT(CASE WHEN status = 'ESCALATED' THEN 1 END) as escalated_count,
                 COUNT(CASE WHEN status = 'REJECTED' THEN 1 END) as rejected_count,
