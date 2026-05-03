@@ -1,0 +1,22 @@
+# Core Dependencies
+chainlit>=1.0.0
+psycopg2-binary>=2.9.9
+confluent-kafka>=2.3.0
+structlog>=24.1.0
+python-dotenv>=1.0.0
+
+# ML/AI Dependencies - Fixed versions for compatibility
+# Protobuf compatibility fix for Python 3.12
+protobuf>=3.20.0,<4.0.0
+sentence-transformers>=2.2.0,<3.0.0
+torch>=2.0.0,<2.3.0
+transformers>=4.30.0,<4.40.0
+
+# Vector database support
+pgvector>=0.2.0
+
+# IBM Watsonx.ai for LLM capabilities
+ibm-watsonx-ai>=0.2.0
+
+# Optional dependencies
+resend>=0.8.0
